@@ -213,7 +213,7 @@ const mostrarDatos = () => {
 
     alert(mensaje)
 
-    alert("Gracias por su compra.\n Recibirás un e-mail cuando esté disponible tu factura" )
+    alert("Gracias por su compra.\n Recibirá un e-mail cuando esté disponible tu factura" )
 }
 
 const simulador = () => {
