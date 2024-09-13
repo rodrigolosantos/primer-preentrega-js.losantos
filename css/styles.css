@@ -1,0 +1,28 @@
+/* Personaliza el estilo para que se ajuste mejor a la estética de la página */
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+nav ul li a {
+    font-size: 1.1rem;
+}
+
+.intro img {
+    border-radius: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
