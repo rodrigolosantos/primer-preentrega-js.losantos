@@ -202,7 +202,7 @@ const agregarDato = () => {
     datos.push(new Dato(nombre, apellido, correo))
 }
 
-// Función para mostrar los productos de la base y calcular el total
+
 const mostrarDatos = () => {
     
     let mensaje = "Tus datos de facturacion son: \n"
