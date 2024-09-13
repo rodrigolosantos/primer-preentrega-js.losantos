@@ -32,7 +32,7 @@ let seleccionUsuario = prompt(
 "Cabernet Franc", precio: $1300 
 "Pinot Noir", precio: $1500
 
-Ingrese el nombre del producto que desea comprar o "comprar" para finalizar:
+Ingresá el nombre del producto que deseas comprar o "comprar" para finalizar:
 `).toLowerCase();
 
 while (seleccionUsuario !== "comprar") {
@@ -40,7 +40,7 @@ while (seleccionUsuario !== "comprar") {
         case "malbec":
             total += 1200;
             seleccionUsuario = prompt(
-                `Usted ha elegido un Malbec. Su nuevo total es de $${total}.
+                `Has elegido un Malbec. Tu nuevo total es de $${total}.
                 
                 ¿Desea comprar algo más? Tenemos disponible:
                 "Torrontés", precio: $1000 
@@ -52,7 +52,7 @@ while (seleccionUsuario !== "comprar") {
                 "Cabernet Franc", precio: $1300 
                 "Pinot Noir", precio: $1500
                 
-                Ingrese el nombre del producto o "comprar" para finalizar:
+                Ingresá el nombre del producto o "comprar" para finalizar:
                 `).toLowerCase();
             break;
 
@@ -60,7 +60,7 @@ while (seleccionUsuario !== "comprar") {
         case "torrontes": 
             total += 1000;
             seleccionUsuario = prompt(
-                `Usted ha elegido un Torrontés. Su nuevo total es de $${total}.
+                `Has elegido un Torrontés. Tu nuevo total es de $${total}.
                 
                 ¿Desea comprar algo más? Tenemos disponible:
                 "Cabernet Sauvignon", precio: $1800 
@@ -71,14 +71,14 @@ while (seleccionUsuario !== "comprar") {
                 "Cabernet Franc", precio: $1300 
                 "Pinot Noir", precio: $1500
                 
-                Ingrese el nombre del producto o "comprar" para finalizar:
+                Ingresá el nombre del producto o "comprar" para finalizar:
                 `).toLowerCase();
             break;
 
         case "cabernet sauvignon":
             total += 1800;
             seleccionUsuario = prompt(
-                `Usted ha elegido un Cabernet Sauvignon. Su nuevo total es de $${total}.
+                `Has elegido un Cabernet Sauvignon. Tu nuevo total es de $${total}.
                 
                 ¿Desea comprar algo más? Tenemos disponible:
                 "Syrah", precio: $1500 
@@ -88,14 +88,14 @@ while (seleccionUsuario !== "comprar") {
                 "Cabernet Franc", precio: $1300 
                 "Pinot Noir", precio: $1500
                 
-                Ingrese el nombre del producto o "comprar" para finalizar:
+                Ingresá el nombre del producto o "comprar" para finalizar:
                 `).toLowerCase();
             break;
 
         case "syrah":
             total += 1500;
             seleccionUsuario = prompt(
-                `Usted ha elegido un Syrah. Su nuevo total es de $${total}.
+                `Has elegido un Syrah. Tu nuevo total es de $${total}.
                 
                 ¿Desea comprar algo más? Tenemos disponible:
                 "Bonarda", precio: $1700 
@@ -104,14 +104,14 @@ while (seleccionUsuario !== "comprar") {
                 "Cabernet Franc", precio: $1300 
                 "Pinot Noir", precio: $1500
                 
-                Ingrese el nombre del producto o "comprar" para finalizar:
+                Ingresá el nombre del producto o "comprar" para finalizar:
                 `).toLowerCase();
             break;
 
         case "bonarda":
             total += 1700;
             seleccionUsuario = prompt(
-                `Usted ha elegido un Bonarda. Su nuevo total es de $${total}.
+                `Has elegido un Bonarda. Tu nuevo total es de $${total}.
                 
                 ¿Desea comprar algo más? Tenemos disponible:
                 "Chardonnay", precio: $1900 
@@ -119,28 +119,28 @@ while (seleccionUsuario !== "comprar") {
                 "Cabernet Franc", precio: $1300 
                 "Pinot Noir", precio: $1500
                 
-                Ingrese el nombre del producto o "comprar" para finalizar:
+                Ingresá el nombre del producto o "comprar" para finalizar:
                 `).toLowerCase();
             break;
 
         case "chardonnay":
             total += 1900;
             seleccionUsuario = prompt(
-                `Usted ha elegido un Chardonnay. Su nuevo total es de $${total}.
+                `Has elegido un Chardonnay. Tu nuevo total es de $${total}.
                 
                 ¿Desea comprar algo más? Tenemos disponible:
                 "Tannat", precio: $1100 
                 "Cabernet Franc", precio: $1300 
                 "Pinot Noir", precio: $1500
                 
-                Ingrese el nombre del producto o "comprar" para finalizar:
+                Ingresá el nombre del producto o "comprar" para finalizar:
                 `).toLowerCase();
             break;
 
         case "tannat":
             total += 1100;
             seleccionUsuario = prompt(
-                `Usted ha elegido un Tannat. Su nuevo total es de $${total}.
+                `Has elegido un Tannat. Tu nuevo total es de $${total}.
                 
                 ¿Desea comprar algo más? Tenemos disponible:
                 "Cabernet Franc", precio: $1300 
@@ -153,27 +153,27 @@ while (seleccionUsuario !== "comprar") {
         case "cabernet franc":
             total += 1300;
             seleccionUsuario = prompt(
-                `Usted ha elegido un Cabernet Franc. Su nuevo total es de $${total}.
+                `Has elegido un Cabernet Franc. Tu nuevo total es de $${total}.
                 
                 ¿Desea comprar algo más? Tenemos disponible:
                 "Pinot Noir", precio: $1500
                 
-                Ingrese el nombre del producto o "comprar" para finalizar:
+                Ingresá el nombre del producto o "comprar" para finalizar:
                 `).toLowerCase();
             break;
 
         case "pinot noir":
             total += 1500;
             seleccionUsuario = prompt(
-                `Usted ha elegido un Pinot Noir. Su nuevo total es de $${total}.
+                `Has elegido un Pinot Noir. Tu nuevo total es de $${total}.
                 
-                Si desea finalizar la compra ingrese "comprar", caso contrario puede seguir eligiendo productos:
+                Si deseas finalizar la compra ingresá "comprar", caso contrario podes seguir eligiendo productos:
                 `).toLowerCase();
             break;
 
         default:
             seleccionUsuario = prompt(
-                `Producto no reconocido. Por favor, ingrese un producto válido o "comprar" para finalizar:
+                `Producto no reconocido. Por favor, ingresá un producto válido o "comprar" para finalizar:
                 "Malbec", "Torrontés", "Cabernet Sauvignon", "Syrah", "Bonarda", "Chardonnay", "Tannat", "Cabernet Franc", "Pinot Noir"
                 `).toLowerCase();
             break;
@@ -190,14 +190,14 @@ class Dato {
         this.correo = correo
     }
 }
-alert("Usted está por realizar una compra" )
+alert("Estás por realizar una compra" )
 
 const datos = []
 
 const agregarDato = () => {
-    let nombre = prompt("Ingrese su Nombre:")
-    let apellido = prompt("Ingrese su Apellido:")
-    let correo = prompt("Ingrese su e-mail:")
+    let nombre = prompt("Ingresa tu Nombre:")
+    let apellido = prompt("Ingresa tu Apellido:")
+    let correo = prompt("Ingresa tu e-mail:")
 
     datos.push(new Dato(nombre, apellido, correo))
 }
@@ -213,7 +213,7 @@ const mostrarDatos = () => {
 
     alert(mensaje)
 
-    alert("Gracias por su compra.\n Recibirá un e-mail cuando esté disponible tu factura" )
+    alert("Gracias por tu compra.\n Recibirás un e-mail cuando esté disponible tu factura" )
 }
 
 const simulador = () => {
