@@ -221,7 +221,7 @@ const simulador = () => {
 
     while (continuar) {
         agregarDato()
-        continuar = confirm("Si queres agregar mas datos de contacto apretá -Aceptar-, de lo contrario apreá -Cancelar- para continuar")
+        continuar = confirm("Si queres agregar mas datos de contacto apretá -Aceptar-, de lo contrario apretá -Cancelar- para continuar")
     }
 
     mostrarDatos()
