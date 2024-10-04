@@ -1,0 +1,90 @@
+/* Estilos generales */
+body {
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #333;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f8f9fa;
+}
+
+header nav .nav-link {
+    color: #f8f9fa;
+    font-weight: bold;
+}
+
+header nav .nav-link:hover {
+    color: #ffc107;
+}
+
+/* Estilos para el formulario */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+form .form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+form .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Botón de enviar */
+form .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form .btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de la sección */
+.empresa h2, .empresa h3 {
+    font-weight: bold;
+    color: #333;
+}
+
+.empresa p {
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+}
+
+footer p {
+    color: #f8f9fa;
+    margin: 0;
+}
