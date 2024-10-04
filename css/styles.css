@@ -1,11 +1,11 @@
-/* Personaliza el estilo para que se ajuste mejor a la estética de la página */
+
 header h1 {
     font-size: 2.5rem;
     font-weight: bold;
 }
 
 nav ul li a {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .intro img {
@@ -15,10 +15,13 @@ nav ul li a {
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
+    
+
 }
 
 .card:hover {
     transform: scale(1.05);
+    
 }
 
 .footer {
@@ -28,45 +31,55 @@ nav ul li a {
 }
 
 .producto {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
+    border: 1px solid #cccccc;
+    padding: 15px;
+    margin: 15px;
     text-align: center;
-    width: 150px;
+    width: 180px;
     display: inline-block;
+    border-radius: 45%;
+    
 }
 .producto img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 }
 button {
-    background-color: #28a745;
+    background-color: #a72844;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 10px;
     cursor: pointer;
+    border-radius: 10%;
 }
 button:hover {
     background-color: #218838;
+    border-radius: 45%;
 }
 #carrito {
     margin-top: 20px;
-    border-top: 2px solid #000;
-    padding-top: 10px;
+    border-top: 15px solid #000;
+    padding-top: 20px;
+    text-align: center;
+    font-size: large;
+    
 }
 #total {
     font-weight: bold;
+    font-size: x-large;
 }
 #checkout-btn {
-    background-color: #007bff;
+    background-color: #ffa600;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     margin-top: 10px;
+    border-radius: 5%;
 }
 #checkout-btn:hover {
-    background-color: #0056b3;
+    background-color: #00b3a7;
+    border-radius: 5%;
 }
 
 

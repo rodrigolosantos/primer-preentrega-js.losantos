@@ -2,15 +2,15 @@ let nombreUsuario = prompt("Por favor, para continuar le solicitamos que ingrese
 alert("¡Hola " + nombreUsuario + "! Bienvenido a nuestra Bodega.");
 
 const stockProductos = [
-    { id: 1, nombre: "Cabernet Franc", precio: 1000, img: "../imagenes/cabernet franc.jpg" },
-    { id: 2, nombre: "Cabernet sauvignon", precio: 2000, img: "../imagenes/cabernet sauvignon.jpg" },
-    { id: 3, nombre: "Chardonnay", precio: 3000, img: "../imagenes/chardonnay.jpg" },
-    { id: 4, nombre: "Bonarda", precio: 4000, img: "../imagenes/bonarda.jpg" },
-    { id: 5, nombre: "Malbec", precio: 5000, img: "../imagenes/malbec.jpg" },
+    { id: 1, nombre: "Cabernet Franc", precio: 5000, img: "../imagenes/cabernet franc.jpg" },
+    { id: 2, nombre: "Cabernet sauvignon", precio: 4000, img: "../imagenes/cabernet sauvignon.jpg" },
+    { id: 3, nombre: "Chardonnay", precio: 3800, img: "../imagenes/chardonnay.jpg" },
+    { id: 4, nombre: "Bonarda", precio: 6700, img: "../imagenes/bonarda.jpg" },
+    { id: 5, nombre: "Malbec", precio: 5100, img: "../imagenes/malbec.jpg" },
     { id: 6, nombre: "Pinot Noir", precio: 6000, img: "../imagenes/pinot noir.jpg" },
-    { id: 7, nombre: "Syrah", precio: 6000, img: "../imagenes/syrah.jpg" },
+    { id: 7, nombre: "Syrah", precio: 7200, img: "../imagenes/syrah.jpg" },
     { id: 8, nombre: "Tannat", precio: 6000, img: "../imagenes/tannat.jpg" },
-    { id: 9, nombre: "Torrontes", precio: 6000, img: "../imagenes/torrontes.jpg" },
+    { id: 9, nombre: "Torrontes", precio: 3000, img: "../imagenes/torrontes.jpg" },
 ];
 
 let carrito = [];
