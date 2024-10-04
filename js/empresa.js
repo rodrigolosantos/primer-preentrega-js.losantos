@@ -13,7 +13,7 @@ form.addEventListener('submit', function (event) {
     const email = document.getElementById('email').value;
 
  
-    alert('Gracias por su compra. Se la enviaremos lo antes posible.');
+    
    
 
     console.log('Información del usuario:');
@@ -33,3 +33,24 @@ document.addEventListener('scroll', function () {
     console.log('Se realizó scroll en la página.');
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevenir el envío del formulario por defecto
+        
+        // Mostrar el primer alert de agradecimiento
+        alert("Gracias por su compra, se la enviaremos lo antes posible.");
+        
+        // Preguntar si quiere seguir comprando
+        const seguirComprando = confirm("¿Quiere seguir comprando?");
+
+        if (seguirComprando) {
+            // Si desea seguir comprando, puede redirigir al usuario a la página de ventas
+            window.location.href = "venta.html";
+        } else {
+            // Si no desea seguir comprando, puede redirigirlo a una página diferente, por ejemplo, al inicio
+            window.location.href = "maridaje.html";
+        }
+    });
+});
