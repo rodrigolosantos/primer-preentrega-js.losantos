@@ -38,28 +38,34 @@
     </header>
     <main class="container my-5">
         <section class="empresa">
-            <h2 class="text-center my-4">Sobre Nosotros</h2>
+            <h2 class="text-center my-4">Finalizá tu Compra</h2>
             <p class="text-center">Somos una empresa dedicada a la comercialización de vinos de alta calidad provenientes de las principales regiones vinícolas de Argentina.</p>
             <p class="text-center"><strong>Locación:</strong> Mendoza, Argentina</p>
-            <h3 class="text-center my-4">Formulario de Reservas</h3>
+            <h3 class="text-center my-4">Datos de facturacion</h3>
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <form action="#" method="post">
                         <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre</label>
+                            <label for="nombre" class="form-label">Nombre/Razon social</label>
                             <input type="text" class="form-control" id="nombre" name="nombre" required>
                         </div>
+                        <div class="mb-3"></div>
+                            <label for="direccion" class="form-label">Direccion</label>
+                            <input type="text" class="form-control" id="direccion" name="direccion" required>
+                        </div>
+                        
                         <div class="mb-3">
+                            <label for="fecha" class="form-label">Fecha Aproximada de Entrega</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha" required>
+                        </div>
+                        <div class="mb-3"></div>
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="fecha" class="form-label">Fecha de Visita</label>
-                            <input type="date" class="form-control" id="fecha" name="fecha" required>
-                        </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Reservar</button>
+                            <button type="submit" class="btn btn-primary">Finalizar Compra</button>
                         </div>
+                       
                     </form>
                 </div>
             </div>
