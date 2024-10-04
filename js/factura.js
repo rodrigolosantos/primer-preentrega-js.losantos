@@ -37,19 +37,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
     
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevenir el envío del formulario por defecto
+        event.preventDefault(); 
         
-        // Mostrar el primer alert de agradecimiento
+        //  agradecimiento
         alert("Gracias por su compra, se la enviaremos lo antes posible.");
         
-        // Preguntar si quiere seguir comprando
+        //  quiere seguir comprando?
         const seguirComprando = confirm("¿Quiere seguir comprando?");
 
         if (seguirComprando) {
-            // Si desea seguir comprando, puede redirigir al usuario a la página de ventas
+            // Si desea seguir comprando, puede redirije la página de ventas
             window.location.href = "venta.html";
         } else {
-            // Si no desea seguir comprando, puede redirigirlo a una página diferente, por ejemplo, al inicio
+            // si dice que no lo redirijo a maridaje
             window.location.href = "maridaje.html";
         }
     });

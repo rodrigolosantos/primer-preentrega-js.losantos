@@ -60,5 +60,5 @@ function actualizarCarrito() {
 }
 
 function irACheckout() {
-    window.location.href = "./empresa.html";  
+    window.location.href = "./factura.html";  
 }
