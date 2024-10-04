@@ -60,6 +60,5 @@ function actualizarCarrito() {
 }
 
 function irACheckout() {
-    // Aquí colocas la URL del HTML al que deseas redirigir
-    window.location.href = "./empresa.html";  // Cambia "checkout.html" por la URL de tu archivo
+    window.location.href = "./empresa.html";  
 }
