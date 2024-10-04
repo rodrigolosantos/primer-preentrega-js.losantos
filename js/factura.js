@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const seguirComprando = confirm("¿Quiere seguir comprando?");
 
         if (seguirComprando) {
-            // Si desea seguir comprando, puede redirije la página de ventas
+            // Si desea seguir comprando, redirije la página de ventas
             window.location.href = "venta.html";
         } else {
             // si dice que no lo redirijo a maridaje
