@@ -15,7 +15,7 @@ document.getElementById('purchase-form').addEventListener('submit', function(eve
     }
 
     // Mostrar alerta nativa para seguir comprando o finalizar
-    const seguirComprando = confirm("Gracias por tu compra. \n ¿Quieres seguir comprando?");
+    const seguirComprando = confirm("Gracias por tu compra.\n ¿Quieres seguir comprando?");
 
     if (seguirComprando) {
         // Si el usuario quiere seguir comprando
