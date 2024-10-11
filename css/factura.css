@@ -1,90 +1,51 @@
-
 body {
-    background-color: #f4f4f9;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f5f5f5;
 }
 
+h1, h2, h3 {
+    color: #7b1d1d; /* Un color tinto refinado */
+}
 
 header {
-    background-color: #333;
+    background-color: #3e2723; /* Un tono oscuro como la madera de las barricas de vino */
 }
 
-header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #f8f9fa;
+.btn-primary {
+    background-color: #8b0000; /* Rojo profundo como un Malbec argentino */
+    border-color: #8b0000;
 }
 
-header nav .nav-link {
-    color: #f8f9fa;
-    font-weight: bold;
+.btn-primary:hover {
+    background-color: #a52a2a;
+    border-color: #a52a2a;
 }
-
-header nav .nav-link:hover {
-    color: #ffc107;
-}
-
-
-form {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-form:hover {
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-form .form-label {
-    font-weight: bold;
-    color: #333;
-}
-
-form .form-control {
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1rem;
-}
-
-form .form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
-}
-
-
-form .btn-primary {
-    background-color: #007bff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-form .btn-primary:hover {
-    background-color: #0056b3;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-.empresa h2, .empresa h3 {
-    font-weight: bold;
-    color: #333;
-}
-
-.empresa p {
-    color: #666;
-}
-
 
 footer {
-    background-color: #333;
+    background-color: #3e2723;
 }
 
-footer p {
-    color: #f8f9fa;
-    margin: 0;
+form label {
+    color: #3e2723;
+}
+
+form input {
+    border-radius: 0;
+    border: 1px solid #8b0000;
+}
+
+form input:focus {
+    border-color: #a52a2a;
+    box-shadow: none;
+}
+
+.text-center p {
+    color: #3e2723;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }

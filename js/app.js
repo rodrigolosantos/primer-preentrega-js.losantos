@@ -1,3 +1,15 @@
+document.getElementById("alertButton").addEventListener("click", function() {
+  const { DateTime } = luxon;
+  const now = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+  
+  Swal.fire({
+      title: '¡Bienvenido a Vinos Argentinos!',
+      text: `La fecha y hora actual es: ${now}`,
+      icon: 'info',
+      confirmButtonText: 'Aceptar'
+  });
+});
+
 let edad = prompt("Ingresa tu edad:");
 
 while (true) {

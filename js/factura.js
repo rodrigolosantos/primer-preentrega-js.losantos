@@ -1,56 +1,41 @@
-
-const form = document.querySelector('form');
-
-
-form.addEventListener('submit', function (event) {
-
-    event.preventDefault();
-
- 
+// Escuchar el evento de envío del formulario
+document.getElementById('purchase-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevenir el envío del formulario
+    
+    // Capturamos la información del formulario
     const nombre = document.getElementById('nombre').value;
     const direccion = document.getElementById('direccion').value;
     const fecha = document.getElementById('fecha').value;
     const email = document.getElementById('email').value;
 
- 
-    
-   
+    // Verificamos que los campos no estén vacíos
+    if (!nombre || !direccion || !fecha || !email) {
+        alert('Por favor, completa todos los campos antes de finalizar la compra.');
+        return;
+    }
 
-    console.log('Información del usuario:');
-    console.log('Nombre/Razón Social:', nombre);
-    console.log('Dirección:', direccion);
-    console.log('Fecha Aproximada de Entrega:', fecha);
-    console.log('Email:', email);
-});
+    // Mostrar alerta nativa para seguir comprando o finalizar
+    const seguirComprando = confirm("Gracias por tu compra. \n ¿Quieres seguir comprando?");
 
-// clicks en la página.
-document.addEventListener('click', function () {
-    console.log('Se hizo clic en la página.');
-});
-
-// scroll en la página.
-document.addEventListener('scroll', function () {
-    console.log('Se realizó scroll en la página.');
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); 
+    if (seguirComprando) {
+        // Si el usuario quiere seguir comprando
+        console.log('El usuario eligió: Seguir comprando.');
+        console.log(`Datos del usuario:
+        - Nombre: ${nombre}
+        - Dirección: ${direccion}
+        - Fecha de entrega: ${fecha}
+        - Email: ${email}`);
         
-        //  agradecimiento
-        alert("Gracias por su compra, se la enviaremos lo antes posible.");
-        
-        //  quiere seguir comprando?
-        const seguirComprando = confirm("¿Quiere seguir comprando?");
+        window.location.href = './venta.html'; // Redirigir a continuar comprando
+    } else {
+        // Si el usuario no quiere seguir comprando
+        console.log('El usuario eligió: Finalizar compra.');
+        console.log(`Datos del usuario:
+        - Nombre: ${nombre}
+        - Dirección: ${direccion}
+        - Fecha de entrega: ${fecha}
+        - Email: ${email}`);
 
-        if (seguirComprando) {
-            // Si desea seguir comprando, redirije la página de ventas
-            window.location.href = "venta.html";
-        } else {
-            // si dice que no lo redirijo a maridaje
-            window.location.href = "maridaje.html";
-        }
-    });
+        window.location.href = './maridaje.html'; // Redirigir a la página de agradecimiento
+    }
 });

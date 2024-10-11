@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/factura.css">
-   
 </head>
 <body>
     <header class="bg-dark text-white text-center py-4">
@@ -36,47 +35,47 @@
             </div>
         </nav>
     </header>
+
     <main class="container my-5">
         <section class="empresa">
             <h2 class="text-center my-4">Finalizá tu Compra</h2>
             <p class="text-center">Somos una empresa dedicada a la comercialización de vinos de alta calidad provenientes de las principales regiones vinícolas de Argentina.</p>
             <p class="text-center"><strong>Locación:</strong> Mendoza, Argentina</p>
-            <h3 class="text-center my-4">Datos de facturacion</h3>
+            <h3 class="text-center my-4">Datos de facturación</h3>
             <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form action="#" method="post">
+                <div class="col-md-6 col-sm-12">
+                    <form id="purchase-form">
                         <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre/Razon social</label>
+                            <label for="nombre" class="form-label">Nombre/Razón social</label>
                             <input type="text" class="form-control" id="nombre" name="nombre" required>
                         </div>
                         <div class="mb-3">
-                            <label for="direccion" class="form-label">Direccion</label>
+                            <label for="direccion" class="form-label">Dirección</label>
                             <input type="text" class="form-control" id="direccion" name="direccion" required>
                         </div>
-                        
                         <div class="mb-3">
                             <label for="fecha" class="form-label">Fecha Aproximada de Entrega</label>
                             <input type="date" class="form-control" id="fecha" name="fecha" required>
                         </div>
-                        <div class="mb-3"></div>
+                        <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">Finalizar Compra</button>
                         </div>
-                       
                     </form>
                 </div>
             </div>
         </section>
     </main>
-  
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/factura.js"></script>
 </body>
+
 <footer class="bg-dark text-white text-center py-4">
     <p>&copy; Rodrigo Losantos</p>
-        <p>2024 Vinos Argentinos. Todos los derechos reservados.</p>
+    <p>2024 Vinos Argentinos. Todos los derechos reservados.</p>
 </footer>
 </html>

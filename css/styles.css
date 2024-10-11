@@ -1,84 +1,39 @@
-
-header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
 }
 
-nav ul li a {
-    font-size: 1.2rem;
+header {
+    background-color: #5c2e2e; /* Color vino */
+}
+
+h1, h2, h4 {
+    color: #fff; /* Blanco para los títulos */
 }
 
 .intro img {
-    border-radius: 10px;
+    max-width: 80%;
+    height: auto;
 }
 
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-    
-
+.regiones h2 {
+    border-bottom: 2px solid #5c2e2e; /* Línea debajo del título */
+    padding-bottom: 10px;
 }
 
-.card:hover {
-    transform: scale(1.05);
-    
+footer {
+    background-color: #5c2e2e; /* Color vino */
 }
 
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
-
-.producto {
-    border: 1px solid #cccccc;
-    padding: 15px;
-    margin: 15px;
-    text-align: center;
-    width: 180px;
-    display: inline-block;
-    border-radius: 45%;
-    
-}
-.producto img {
-    width: 100px;
-    height: 100px;
-}
-button {
-    background-color: #a72844;
-    color: white;
+.btn-primary {
+    background-color: #8B0000; /* Un color más oscuro para el botón */
     border: none;
-    padding: 10px 10px;
-    cursor: pointer;
-    border-radius: 10%;
 }
-button:hover {
-    background-color: #218838;
-    border-radius: 45%;
+
+.btn-primary:hover {
+    background-color: #A00000; /* Color al pasar el mouse */
 }
-#carrito {
-    margin-top: 20px;
-    border-top: 15px solid #000;
-    padding-top: 20px;
-    text-align: center;
-    font-size: large;
-    
+
+.text-center {
+    margin: 20px 0;
 }
-#total {
-    font-weight: bold;
-    font-size: x-large;
-}
-#checkout-btn {
-    background-color: #ffa600;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5%;
-}
-#checkout-btn:hover {
-    background-color: #00b3a7;
-    border-radius: 5%;
-}
-<
