@@ -1,4 +1,4 @@
-// Reemplazamos el prompt y alert por un formulario más moderno para pedir el nombre
+
 document.addEventListener('DOMContentLoaded', function() {
     const nombreUsuario = localStorage.getItem('nombreUsuario');
 
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localStorage.setItem('nombreUsuario', nombreIngresado);
                 nombreModal.hide();
 
-                // Usando SweetAlert para el mensaje de bienvenida
+                // Uso SweetAlert para el mensaje de bienvenida
                 Swal.fire({
                     title: `¡Hola ${nombreIngresado}!`,
                     text: "Bienvenido a nuestra Bodega.",
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     } else {
-        // Usando SweetAlert para la bienvenida cuando el usuario ya está registrado
+        // Uso SweetAlert para la bienvenida cuando el usuario ya está registrado
         Swal.fire({
             title: `¡Hola ${nombreUsuario}!`,
             text: "Bienvenido de nuevo a nuestra Bodega.",
@@ -78,7 +78,7 @@ const contenedorProductos = document.getElementById("contenedor-productos");
 const productosCarrito = document.getElementById("productos-carrito");
 const totalElement = document.getElementById("total");
 
-// Mostrar productos en la tienda
+// Muestro productos en la tienda
 stockProductos.forEach((producto) => {
     const div = document.createElement("div");
     div.classList.add("producto", "col-md-4", "mb-4");
@@ -97,7 +97,7 @@ stockProductos.forEach((producto) => {
     contenedorProductos.appendChild(div);
 });
 
-// Agregar producto al carrito
+// Agrego producto al carrito
 function agregarAlCarrito(idProducto) {
     const producto = stockProductos.find(p => p.id === idProducto);
     const productoEnCarrito = carrito.find(p => p.id === idProducto);
@@ -111,7 +111,7 @@ function agregarAlCarrito(idProducto) {
     total += producto.precio;
     actualizarCarrito();
 
-    // Usar SweetAlert para confirmar que el producto fue añadido
+    // Uso SweetAlert para confirmar que el producto fue añadido
     Swal.fire({
         title: 'Producto añadido',
         text: `${producto.nombre} ha sido añadido al carrito`,
@@ -121,7 +121,7 @@ function agregarAlCarrito(idProducto) {
     });
 }
 
-// Actualizar carrito con botones de +, -, y eliminar
+// Actualizo carrito con botones de +, -, y eliminar
 function actualizarCarrito() {
     productosCarrito.innerHTML = '';
     carrito.forEach((producto) => {
@@ -174,4 +174,29 @@ function irACheckout() {
     setTimeout(() => {
         window.location.href = "./factura.html";
     }, 2000); // Retrasamos la navegación 2 segundos
+}
+// Ir a checkout con validación de carrito vacío
+function irACheckout() {
+    if (carrito.length === 0) {
+        // Uso SweetAlert para mostrar una alerta si el carrito está vacío
+        Swal.fire({
+            title: 'Carrito vacío',
+            text: 'No ha seleccionado ningún producto. Por favor, añada productos antes de finalizar la compra.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar'
+        });
+    } else {
+        // Si el carrito tiene productos, redirige al checkout
+        Swal.fire({
+            title: 'Procesando compra',
+            text: 'Necesitamos tus datos para facturar la compra',
+            icon: 'success',
+            timer: 5000,
+            showConfirmButton: false
+        });
+
+        setTimeout(() => {
+            window.location.href = "./factura.html";
+        }, 5000); // Retraso la navegación 2 segundos
+    }
 }
