@@ -1,63 +1,74 @@
 body {
+    background-image: url(../imagenes/mendoza\ .jpg);
+    background-size: cover;
     font-family: 'Arial', sans-serif;
-    background-color: 
-    hsl(27, 58%, 90%); /* Fondo color siena claro */
-    color: #984f1e; /* Color de texto relacionado con la temática de vino */
+    background-repeat: no-repeat;
 }
 
-header {
-    background-color: #6d1400; /* Color marrón oscuro para darle un toque rústico */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+
 
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 3 rem;
     font-weight: bold;
-    color: #F8F1E5; /* Color claro contrastante */
+    color: #F8F1E5; 
 }
 
 .navbar-nav .nav-link {
     color: #F8F1E5 !important;
-    margin: 0 15px;
+    margin:  15px;
     font-size: 1.2rem;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #D2B48C !important; /* Color siena claro al pasar el ratón */
+    color: #110d09 !important; 
 }
 
 .hero {
     padding: 60px 0;
     text-align: center;
+    font-size: xx-large;
+    color: #a18080;
 }
 
 .hero h2 {
     font-size: 2.5rem;
-    color: #5B3923; /* Color vino oscuro */
+    color: #aea198; 
+    
 }
-
+p { color: rgb(0, 0, 0);
+font-size: x-large;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-style: normal;
+}
 main h2, main h4 {
-    color: #5B3923;
+    color: #ffffff;
+    font-size: xx-large;
+    font-weight: bolder;
+   
+    
 }
 
 footer {
-    background-color: #8B4513;
-    color: #F8F1E5;
+    background-color: #120d0a;
+    color: #bcae92;
     padding: 20px 0;
+    font-size: larger;
 }
 
 footer p {
     margin: 0;
+    font-size: larger;
+    color: aliceblue;
 }
 
 button {
-    background-color: #8B4513;
+    background-color: #1e130a;
     border: none;
     color: #F8F1E5;
 }
 
 button:hover {
-    background-color: #A0522D;
+    background-color: #3c2c25;
 }
 
 /* Estilos para las tarjetas de vino */
@@ -73,12 +84,12 @@ button:hover {
 
 /* Ajustar el tamaño de las imágenes dentro de las tarjetas */
 .card-img-top {
-    height: 220px; /* Altura fija para las imágenes */
-    object-fit: cover; /* Mantener la proporción y cubrir el área */
+    height: 220px; 
+    object-fit: cover; 
 }
 
 /* Cambiar el tamaño de las tarjetas */
 .col-md-4 {
-    max-width: 240px; /* Ancho máximo de la tarjeta */
-    margin: 0 auto; /* Centrar las tarjetas */
+    max-width: 240px; 
+    margin: 0 auto; 
 }
