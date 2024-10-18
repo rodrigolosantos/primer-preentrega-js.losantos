@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Cargar el nombre de usuario del localStorage
     const nombreUsuario = localStorage.getItem('nombreUsuario');
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
     // Verifica si el usuario ya ingresó su nombre
     if (nombreUsuario) {
         document.getElementById('nombre').value = nombreUsuario; // Prellenar el campo nombre
