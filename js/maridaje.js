@@ -1,22 +1,134 @@
+// Datos estáticos de vinos
+const wineries = [
+    { nombre: "Cabernet Franc", tipo: "Tinto", img: "../imagenes/cabernet franc.jpg", maridaje: "Marida perfectamente con carnes rojas a la parrilla." },
+    { nombre: "Cabernet Sauvignon", tipo: "Tinto", img: "../imagenes/cabernet sauvignon.jpg", maridaje: "Ideal para acompañar pescados y mariscos." },
+    { nombre: "Chardonnay", tipo: "Blanco", img: "../imagenes/chardonnay.jpg", maridaje: "Excelente para maridar con quesos suaves y aves." },
+    { nombre: "Bonarda", tipo: "Tinto", img: "../imagenes/bonarda.jpg", maridaje: "Ideal para platos de carne." },
+    { nombre: "Malbec", tipo: "Tinto", img: "../imagenes/malbec.jpg", maridaje: "Perfecto con parrillas." },
+    { nombre: "Pinot Noir", tipo: "Blanco", img: "../imagenes/pinot noir.jpg", maridaje: "Acompaña bien aves y quesos." },
+    { nombre: "Syrah", tipo: "Tinto", img: "../imagenes/syrah.jpg", maridaje: "Excelente con carne de caza." },
+    { nombre: "Tannat", tipo: "Tinto", img: "../imagenes/tannat.jpg", maridaje: "Combina con platos robustos." },
+    { nombre: "Torrontés", tipo: "Blanco", img: "../imagenes/torrontes.jpg", maridaje: "Acompaña a la perfección los mariscos." }
+];
 
+// Almacenar datos en local storage
+localStorage.setItem('wineriesData', JSON.stringify(wineries));
 
-let maridaje = prompt ("¿Que vas a comer hoy? pescados y mariscos, carnes, vegetales, postres?");
+// Recuperar datos del local storage
+const savedWineries = JSON.parse(localStorage.getItem('wineriesData'));
 
-switch (maridaje) {
-    case 'pescados y mariscos':
-        alert('Para acompañar pescados y mariscos, los vinos blancos son la opción más adecuada, destacando por su frescura y acidez. Un Albariño, con sus notas de melocotón y cítricos, resalta los sabores marinos, mientras que un Sauvignon Blanc aporta un toque herbáceo que complementa perfectamente las ensaladas de mariscos. Además, un vino espumoso como el Champagne o Cava, con su efervescencia, limpia el paladar entre bocado y bocado, realzando la experiencia gastronómica.');
-        break;
-    case 'carnes':
-        alert ('Con un plato de carne se recomienda tomar vinos tintos, como el Cabernet Sauvignon o el Malbec, que complementan la riqueza y sabor intenso de la carne. El Syrah/Shiraz también es una excelente opción, ya que su sabor ahumado y especiado realza la experiencia gastronómica. Estos vinos tintos equilibran la grasa y la textura de la carne, creando un matrimonio perfecto.');
-        break;
-    case 'vegetales':
-        alert('Con un plato de vegetales se recomienda tomar vinos blancos, como el Sauvignon Blanc o el Pinot Grigio, que complementan la frescura y sabor delicado de los vegetales. El Riesling también es una excelente opción, ya que su acidez y sabor floral realzan los sabores naturales de los vegetales. Estos vinos blancos refrescan y equilibran la ligereza de los vegetales, creando un matrimonio armonioso.');
-        break;
-    case 'postres':
-        alert('Con un plato de postres se recomienda tomar vinos dulces y aromáticos, como el Moscatel o el Vin Santo, que complementan la dulzura y riqueza de los postres. El Tawny Port también es una excelente opción, ya que su sabor nutrido y afrutado realza los sabores caramelizados y dulces de los postres. Estos vinos dulces y aromáticos equilibran la riqueza de los postres, creando un final perfecto para la comida.');
-        break;
-        default:
-            alert( 'Aqui le damos una idea de maridaje');
+// Mostrar vinos en la página
+const displayWineries = (wineries) => {
+    const wineryContainer = document.getElementById('wineries');
+    const winerySelect = document.getElementById('winerySelect');
+
+    wineries.forEach(winery => {
+        // Tarjeta de vino
+        const card = document.createElement('div');
+        card.className = 'col-md-4 mb-4';
+        card.innerHTML = `
+            <div class="card">
+                <img src="${winery.img}" class="card-img-top" alt="${winery.nombre}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">${winery.nombre}</h5>
+                    <p class="card-text">${winery.maridaje}</p>
+                </div>
+            </div>
+        `;
+        wineryContainer.appendChild(card);
+
+        // Opción para el selector
+        const option = document.createElement('option');
+        option.value = winery.nombre;
+        option.textContent = winery.nombre;
+        winerySelect.appendChild(option);
+    });
+};
+
+// Sugerir maridaje
+const suggestPairing = () => {
+    let maridaje = prompt("¿Qué vas a comer hoy? (pescados y mariscos, carnes, vegetales, postres)");
+    
+    switch (maridaje) {
+        case 'pescados y mariscos':
+            Swal.fire('Sugerencia', 'Para acompañar pescados y mariscos, los vinos blancos son la opción más adecuada.', 'info');
             break;
-}
+        case 'carnes':
+            Swal.fire('Sugerencia', 'Con un plato de carne se recomienda tomar vinos tintos.', 'info');
+            break;
+        case 'vegetales':
+            Swal.fire('Sugerencia', 'Con un plato de vegetales se recomienda tomar vinos blancos.', 'info');
+            break;
+        case 'postres':
+            Swal.fire('Sugerencia', 'Con un plato de postres se recomienda tomar vinos dulces.', 'info');
+            break;
+        default:
+            Swal.fire('Error', 'Por favor, elige una opción válida de maridaje.', 'error');
+            break;
+    }
+};
+
+// Manejar el envío de reseñas
+const handleReviewSubmit = (event) => {
+    event.preventDefault();
+
+    const selectedWinery = document.getElementById('winerySelect').value;
+    const reviewText = document.getElementById('reviewInput').value;
+
+    if (selectedWinery && reviewText) {
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || {};
+        
+        if (!reviews[selectedWinery]) {
+            reviews[selectedWinery] = [];
+        }
+
+        reviews[selectedWinery].push(reviewText);
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        
+        document.getElementById('reviewForm').reset();
+        displayReviews();
+    }
+};
+
+// Mostrar reseñas en formato de blog
+const displayReviews = () => {
+    const reviewsContainer = document.getElementById('reviews');
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || {};
+    reviewsContainer.innerHTML = ''; // Limpiar contenedor de reseñas
+
+    for (const winery in reviews) {
+        const wineryReviews = document.createElement('div');
+        wineryReviews.className = 'col-md-12 review-card';
+        wineryReviews.innerHTML = `<h4>Reseñas para ${winery}:</h4>`;
+        
+        reviews[winery].forEach(review => {
+            const reviewItem = document.createElement('div');
+            reviewItem.className = 'card mb-2';
+            reviewItem.innerHTML = `
+                <div class="card-body">
+                    <p class="card-text">${review}</p>
+                </div>
+            `;
+            wineryReviews.appendChild(reviewItem);
+        });
+
+        reviewsContainer.appendChild(wineryReviews);
+    }
+};
+
+// Borrar reseñas
+const clearReviews = () => {
+    localStorage.removeItem('reviews');
+    Swal.fire('Reseñas Borradas', 'Las reseñas han sido borradas exitosamente.', 'success');
+    displayReviews(); // Actualizar la vista
+};
+
+// Inicializar la página
+document.getElementById('maridajeBtn').addEventListener('click', suggestPairing);
+document.getElementById('reviewForm').addEventListener('submit', handleReviewSubmit);
+document.getElementById('clearReviewsBtn').addEventListener('click', clearReviews);
+
+// Mostrar reseñas en la página al cargar
+displayWineries(savedWineries);
+displayReviews();
 
