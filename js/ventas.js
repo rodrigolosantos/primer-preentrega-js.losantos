@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const nombreUsuario = localStorage.getItem('nombreUsuario');
 
@@ -169,12 +168,6 @@ function eliminarDelCarrito(idProducto) {
     actualizarCarrito();
 }
 
-// Ir a checkout
-function irACheckout() {
-    setTimeout(() => {
-        window.location.href = "./factura.html";
-    }, 2000); // Retrasamos la navegación 2 segundos
-}
 // Ir a checkout con validación de carrito vacío
 function irACheckout() {
     if (carrito.length === 0) {
@@ -186,6 +179,10 @@ function irACheckout() {
             confirmButtonText: 'Aceptar'
         });
     } else {
+        // Guardar la información de la compra en localStorage
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        localStorage.setItem('totalCompra', total);
+
         // Si el carrito tiene productos, redirige al checkout
         Swal.fire({
             title: 'Procesando compra',
@@ -197,6 +194,6 @@ function irACheckout() {
 
         setTimeout(() => {
             window.location.href = "./factura.html";
-        }, 5000); // Retraso la navegación 2 segundos
+        }, 5000); // Retraso la navegación 5 segundos
     }
 }

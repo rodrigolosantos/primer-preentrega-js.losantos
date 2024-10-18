@@ -1,6 +1,39 @@
+// Espera a que el documento esté completamente cargado
+document.addEventListener('DOMContentLoaded', function() {
+    // Cargar el nombre de usuario del localStorage
+    const nombreUsuario = localStorage.getItem('nombreUsuario');
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+    // Verifica si el usuario ya ingresó su nombre
+    if (nombreUsuario) {
+        document.getElementById('nombre').value = nombreUsuario; // Prellenar el campo nombre
+    }
+
+    // Mostrar los detalles de la compra en el formulario
+    mostrarCompra(carrito);
+});
+
+// Función para mostrar la compra completa en el formulario
+function mostrarCompra(carrito) {
+    // Crea un elemento para mostrar los productos comprados
+    const productosComprados = document.querySelector('.productos-comprados');
+    
+    // Verifica si hay productos en el carrito
+    if (carrito.length === 0) {
+        productosComprados.innerHTML = '<p>No hay productos en el carrito.</p>';
+    } else {
+        let listaProductos = '<h4>Productos en tu compra:</h4><ul>';
+        carrito.forEach(producto => {
+            listaProductos += `<li>${producto.nombre} - Precio: $${producto.precio} (Cantidad: ${producto.cantidad})</li>`;
+        });
+        listaProductos += '</ul>';
+        productosComprados.innerHTML = listaProductos;
+    }
+}
+
+// Agregar el evento de envío del formulario
 document.getElementById('purchase-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Preveniene el envío del formulario
+    event.preventDefault(); // Previene el envío del formulario
     
     // Capturamos la información del formulario
     const nombre = document.getElementById('nombre').value;
