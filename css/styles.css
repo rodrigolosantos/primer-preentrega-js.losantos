@@ -59,3 +59,26 @@ button {
 button:hover {
     background-color: #A0522D;
 }
+
+/* Estilos para las tarjetas de vino */
+.card {
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Asegúrate de que el contenido no se desborde */
+    transition: transform 0.2s; /* Añadir una transición suave al efecto hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+/* Ajustar el tamaño de las imágenes dentro de las tarjetas */
+.card-img-top {
+    height: 220px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Mantener la proporción y cubrir el área */
+}
+
+/* Cambiar el tamaño de las tarjetas */
+.col-md-4 {
+    max-width: 240px; /* Ancho máximo de la tarjeta */
+    margin: 0 auto; /* Centrar las tarjetas */
+}
