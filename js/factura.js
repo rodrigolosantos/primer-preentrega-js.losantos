@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function mostrarCompra(carrito) {
     // Crea un elemento para mostrar los productos comprados
     const productosComprados = document.querySelector('.productos-comprados');
-    
+    let total = 0; // Inicializa el total
+
     // Verifica si hay productos en el carrito
     if (carrito.length === 0) {
         productosComprados.innerHTML = '<p>No hay productos en el carrito.</p>';
@@ -25,10 +26,14 @@ function mostrarCompra(carrito) {
         let listaProductos = '<h4>Productos en tu compra:</h4><ul>';
         carrito.forEach(producto => {
             listaProductos += `<li>${producto.nombre} - Precio: $${producto.precio} (Cantidad: ${producto.cantidad})</li>`;
+            total += producto.precio * producto.cantidad; // Suma al total
         });
         listaProductos += '</ul>';
         productosComprados.innerHTML = listaProductos;
     }
+
+    // Muestra el total en la sección correspondiente
+    document.querySelector('.total-precio').textContent = total.toFixed(2);
 }
 
 // Agregar el evento de envío del formulario
@@ -47,8 +52,10 @@ document.getElementById('purchase-form').addEventListener('submit', function(eve
         return;
     }
 
-    // seguir comprando o finalizar?
-    const seguirComprando = confirm("Gracias por tu compra.\n La recibiras pronto en tu casa.\n ¿Quieres seguir comprando?");
+    // Confirmar compra con detalles
+    const total = document.querySelector('.total-precio').textContent;
+    let detallesCompra = `Factura 00001\nNombre: ${nombre}\nDirección: ${direccion}\nFecha de entrega: ${fecha}\nEmail: ${email}\nTotal: $${total}\n\n¿Quieres seguir comprando?`;
+    const seguirComprando = confirm(`Gracias por tu compra.\n La recibirás pronto en tu casa.\n${detallesCompra}`);
 
     if (seguirComprando) {
         // Si el usuario quiere seguir comprando...
