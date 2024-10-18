@@ -2,9 +2,9 @@ body {
     background-image: url(../imagenes/mendoza\ .jpg);
     background-size: cover;
     font-family: 'Arial', sans-serif;
-    background-repeat: no-repeat;
+    
 }
-
+p {color: #ffffff; }
 
 
 .navbar-brand {
@@ -20,36 +20,36 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #110d09 !important; 
+    color: #fde3ca !important; 
 }
 
 .hero {
     padding: 60px 0;
     text-align: center;
     font-size: xx-large;
-    color: #a18080;
+    color: hsl(0, 55%, 25%);
+  
 }
 
 .hero h2 {
     font-size: 2.5rem;
-    color: #aea198; 
-    
-}
-p { color: rgb(0, 0, 0);
-font-size: x-large;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-style: normal;
-}
-main h2, main h4 {
-    color: #ffffff;
-    font-size: xx-large;
-    font-weight: bolder;
-   
+    color: #f9f9f9;  
     
 }
 
+
+main h2, main h4 {
+    color: #ffffff;
+    font-size: xx-large;
+    font-weight: bolder;  
+    
+    }
+
+
+
+
 footer {
-    background-color: #120d0a;
+    background-color: #cbb7aa;
     color: #bcae92;
     padding: 20px 0;
     font-size: larger;
@@ -62,34 +62,12 @@ footer p {
 }
 
 button {
-    background-color: #1e130a;
+    background-color: #d9cec6;
     border: none;
     color: #F8F1E5;
 }
 
 button:hover {
-    background-color: #3c2c25;
+    background-color: #e4fdfc;
 }
 
-/* Estilos para las tarjetas de vino */
-.card {
-    border-radius: 15px; /* Bordes redondeados */
-    overflow: hidden; /* Asegúrate de que el contenido no se desborde */
-    transition: transform 0.2s; /* Añadir una transición suave al efecto hover */
-}
-
-.card:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
-}
-
-/* Ajustar el tamaño de las imágenes dentro de las tarjetas */
-.card-img-top {
-    height: 220px; 
-    object-fit: cover; 
-}
-
-/* Cambiar el tamaño de las tarjetas */
-.col-md-4 {
-    max-width: 240px; 
-    margin: 0 auto; 
-}
