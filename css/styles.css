@@ -71,6 +71,14 @@ button:hover {
     background-color: #e4fdfc;
 }
 
+.logo:hover {
+    -webkit-transform: rotate(360deg);
+  transition: 1s;
+  border-radius: 100%;
+  margin: auto;
+  
+  }
+
 @media (min-width: 768px) {
     .hero h2 {
         color: #000000; /* Color negro en pantallas grandes */
