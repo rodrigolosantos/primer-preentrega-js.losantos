@@ -188,7 +188,7 @@ function irACheckout() {
             title: 'Procesando compra',
             text: 'Necesitamos tus datos para facturar la compra',
             icon: 'success',
-            timer: 5000,
+            timer: 3000,
             showConfirmButton: false
         });
 
