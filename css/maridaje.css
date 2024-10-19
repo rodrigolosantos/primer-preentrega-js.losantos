@@ -40,7 +40,7 @@ font-size: x-large;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-style: normal;
 }
-main h2, main h4 {
+main h2, main h4 ,h3{
     color: #ffffff;
     font-size: xx-large;
     font-weight: bolder;
@@ -71,25 +71,26 @@ button:hover {
     background-color: #3c2c25;
 }
 
-/* Estilos para las tarjetas de vino */
+
 .card {
-    border-radius: 15px; /* Bordes redondeados */
-    overflow: hidden; /* Asegúrate de que el contenido no se desborde */
-    transition: transform 0.2s; /* Añadir una transición suave al efecto hover */
+    border-radius: 15px; 
+    overflow: hidden; 
+    transition: transform 0.2s; 
 }
 
 .card:hover {
     transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
 }
 
-/* Ajustar el tamaño de las imágenes dentro de las tarjetas */
+
 .card-img-top {
     height: 220px; 
     object-fit: cover; 
 }
 
-/* Cambiar el tamaño de las tarjetas */
+
 .col-md-4 {
     max-width: 240px; 
     margin: 0 auto; 
 }
+

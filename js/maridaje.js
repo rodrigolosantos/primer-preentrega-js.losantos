@@ -1,4 +1,4 @@
-// Datos estáticos de vinos
+// Datos de vinos
 const wineries = [
     { nombre: "Cabernet Franc", tipo: "Tinto", img: "../imagenes/cabernet franc.jpg", maridaje: "Marida perfectamente con carnes rojas a la parrilla." },
     { nombre: "Cabernet Sauvignon", tipo: "Tinto", img: "../imagenes/cabernet sauvignon.jpg", maridaje: "Ideal para acompañar pescados y mariscos." },
@@ -11,13 +11,13 @@ const wineries = [
     { nombre: "Torrontés", tipo: "Blanco", img: "../imagenes/torrontes.jpg", maridaje: "Acompaña a la perfección los mariscos." }
 ];
 
-// Almacenar datos en local storage
+// Almacena datos en local storage
 localStorage.setItem('wineriesData', JSON.stringify(wineries));
 
-// Recuperar datos del local storage
+// Recupera datos del local storage
 const savedWineries = JSON.parse(localStorage.getItem('wineriesData'));
 
-// Mostrar vinos en la página
+// Mostra vinos en la página
 const displayWineries = (wineries) => {
     const wineryContainer = document.getElementById('wineries');
     const winerySelect = document.getElementById('winerySelect');
@@ -90,7 +90,7 @@ const handleReviewSubmit = (event) => {
     }
 };
 
-// Mostrar reseñas en formato de blog
+// Muestra reseñas en formato de blog
 const displayReviews = () => {
     const reviewsContainer = document.getElementById('reviews');
     const reviews = JSON.parse(localStorage.getItem('reviews')) || {};
@@ -116,19 +116,19 @@ const displayReviews = () => {
     }
 };
 
-// Borrar reseñas
+// Borra reseñas
 const clearReviews = () => {
     localStorage.removeItem('reviews');
     Swal.fire('Reseñas Borradas', 'Las reseñas han sido borradas exitosamente.', 'success');
     displayReviews(); // Actualizar la vista
 };
 
-// Inicializar la página
+// Inicializa la página
 document.getElementById('maridajeBtn').addEventListener('click', suggestPairing);
 document.getElementById('reviewForm').addEventListener('submit', handleReviewSubmit);
 document.getElementById('clearReviewsBtn').addEventListener('click', clearReviews);
 
-// Mostrar reseñas en la página al cargar
+// Muetra reseñas en la página al cargar
 displayWineries(savedWineries);
 displayReviews();
 

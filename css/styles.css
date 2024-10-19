@@ -38,7 +38,7 @@ p {color: #ffffff; }
 }
 
 
-main h2, main h4 {
+main h2, main h4 ,  h3 {
     color: #ffffff;
     font-size: xx-large;
     font-weight: bolder;  
@@ -71,3 +71,8 @@ button:hover {
     background-color: #e4fdfc;
 }
 
+@media (min-width: 768px) {
+    .hero h2 {
+        color: #000000; /* Color negro en pantallas grandes */
+    }
+}
