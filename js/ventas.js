@@ -188,12 +188,12 @@ function irACheckout() {
             title: 'Procesando compra',
             text: 'Necesitamos tus datos para facturar la compra',
             icon: 'success',
-            timer: 3000,
+            timer: 2000,
             showConfirmButton: false
         });
 
         setTimeout(() => {
             window.location.href = "./factura.html";
-        }, 5000); // Retraso la navegación 5 segundos
+        }, 2000); // Retraso la navegación 5 segundos
     }
 }

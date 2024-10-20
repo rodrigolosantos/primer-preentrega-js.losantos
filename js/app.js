@@ -13,32 +13,41 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
   
-    // Función para validar la edad del usuario
-    function validarEdad() {
-        let edad = prompt("Ingresa tu edad:");
-  
-        while (true) {
-            if (isNaN(edad)) {
-                edad = parseInt(edad, 10);
-                if (isNaN(edad)) {
-                    alert("Por favor, ingresa una edad válida.");
-                    edad = prompt("Ingresa tu edad:");
+      // Función para validar la edad del usuario
+      function validarEdad() {
+        Swal.fire({
+            title: 'Verificación de edad',
+            text: 'Ingresa tu edad:',
+            input: 'number',
+            inputAttributes: {
+                min: 1,
+                max: 120,
+                step: 1,
+            },
+            inputPlaceholder: 'Tu edad',
+            showCancelButton: false,
+            confirmButtonText: 'Enviar',
+            allowOutsideClick: false,
+            inputValidator: (value) => {
+                if (!value || isNaN(value)) {
+                    return 'Por favor, ingresa una edad válida.';
+                } else if (value < 18) {
+                    return 'Lo sentimos, debes ser mayor de 18 años para acceder a este sitio.';
                 }
-            } else if (edad < 18) {
-                alert("Lo sentimos, debes ser mayor de 18 años para acceder a este sitio.");
-                edad = prompt("Ingresa tu edad:");
-            } else {
-                break; // Salir del bucle si la edad es válida
             }
-        }
-  
-        if (edad >= 18) {
-            alert("Acceso permitido.");
-        }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Acceso permitido',
+                    text: 'Bienvenido/a al sitio',
+                    icon: 'success'
+                });
+            }
+        });
     }
-  
+
     // Llamar a la función de validación de edad
-    validarEdad();
+    validarEdad()
   
     // Información adicional sobre vinos argentinos
     const infoContent = `

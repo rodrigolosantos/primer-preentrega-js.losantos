@@ -53,8 +53,8 @@ document.getElementById('purchase-form').addEventListener('submit', function(eve
 
     // Confirmar compra con detalles
     const total = document.querySelector('.total-precio').textContent;
-    let detallesCompra = `Factura 00001\nNombre: ${nombre}\nDirección: ${direccion}\nFecha de entrega: ${fecha}\nEmail: ${email}\nTotal: $${total}\n\n¿Quieres seguir comprando?`;
-    const seguirComprando = confirm(`Gracias por tu compra.\n La recibirás pronto en tu casa.\n${detallesCompra}`);
+    let detallesCompra = `Factura N°00001\nNombre: ${nombre}\nDirección: ${direccion}\nFecha de entrega: ${fecha}\nEmail: ${email}\nTotal: $${total}\n\n¿Quieres seguir comprando?\n si es asi oprime ACEPTAR, de lo contrario CANCELAR para obtener mas informacion.`;
+    const seguirComprando = confirm(`Gracias por tu compra!!!.\n La recibirás en la fecha indicada.\n${detallesCompra}`);
 
     if (seguirComprando) {
         // Si el usuario quiere seguir comprando...
