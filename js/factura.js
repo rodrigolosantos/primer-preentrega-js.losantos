@@ -42,12 +42,11 @@ document.getElementById('purchase-form').addEventListener('submit', function(eve
     }
 
     const total = document.querySelector('.total-precio').textContent;
-    let detallesCompra = `Factura N°00001\nNombre: ${nombre}\nDirección: ${direccion}\nFecha de entrega: ${fecha}\nEmail: ${email}\nTotal: $${total}\n\n¿Quieres seguir comprando?\n Si es así, oprime ACEPTAR, de lo contrario, CANCELAR para finalizar la compra.`;
-    const seguirComprando = confirm(`Gracias por tu compra!!!.\nLa recibirás en la fecha indicada.\n${detallesCompra}`);
+    let detallesCompra = `Factura N°00001\nNombre: ${nombre}\nDirección: ${direccion}\nFecha de entrega: ${fecha}\nEmail: ${email}\nTotal: $${total}`;
 
-    if (seguirComprando) {
-        window.location.href = './venta.html';
-    } else {
+    const datosCorrectos = confirm(`Por favor verifica los siguientes datos:\n\n${detallesCompra}\n\n¿Son correctos?`);
+
+    if (datosCorrectos) {
         Swal.fire({
             title: '¡Compra finalizada!',
             html: '<b>Te enviamos la factura al correo indicado. ¡Gracias nuevamente!</b><br><i>Que disfrutes tu vino</i>',
@@ -62,7 +61,14 @@ document.getElementById('purchase-form').addEventListener('submit', function(eve
                 title: 'swal-title-custom'
             }
         }).then(() => {
-            window.location.href = './maridaje.html';
+            const seguirComprando = confirm('¿Quieres seguir comprando?');
+            if (seguirComprando) {
+                window.location.href = './venta.html';
+            } else {
+                window.location.href = './maridaje.html';
+            }
         });
+    } else {
+        alert('Por favor, revisa y corrige los datos antes de continuar.');
     }
 });
